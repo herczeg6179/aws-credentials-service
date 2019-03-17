@@ -1,0 +1,52 @@
+{
+    "name": "aws-credentials-service",
+    "version": "1.0.0",
+    "description": "helper to get credentials by profile from aws shared credentials",
+    "main": "index.js",
+    "scripts": {
+        "test": "printf \"No test implemented. Shame. \\xF0\\x9F\\x94\\x94\" && exit 0",
+        "lint": "eslint src -c .eslintrc.json --ext js,json",
+        "format:fix": "pretty-quick --staged",
+        "format:fix:all": "pretty-quick"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run format:fix",
+            "pre-push": "npm run test"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/herczeg6179/aws-credentials-service.git"
+    },
+    "keywords": [
+        "aws",
+        "shared",
+        "credentials"
+    ],
+    "author": "herczegmate",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/herczeg6179/aws-credentials-service/issues"
+    },
+    "homepage": "https://github.com/herczeg6179/aws-credentials-service#readme",
+    "dependencies": {
+        "aws-sdk": "^2.406.0"
+    },
+    "devDependencies": {
+        "ajv": "^6.9.1",
+        "eslint": "^5.15.2",
+        "eslint-config-prettier": "^4.0.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-json": "^1.4.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "husky": "^1.3.1",
+        "pre-commit": "^1.2.2",
+        "prettier-eslint-cli": "^4.7.1",
+        "pretty-quick": "^1.10.0"
+    }
+}
