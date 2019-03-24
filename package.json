@@ -4,10 +4,10 @@
     "description": "helper to get credentials by profile from aws shared credentials",
     "main": "dist/index.js",
     "scripts": {
-        "publish": "git add dist/* # since I have no intention of releasing to the npm registry for now, the dist folder is commited instead",
+        "publish": "git add dist/* && echo \"Since I have no intention of releasing to the npm registry for now, the dist folder is commited instead\"",
         "build": "babel ./src -d ./dist",
         "build:safe": "npm run lint && babel ./src -d ./dist",
-        "test": "printf \"No test implemented. Shame. \\xF0\\x9F\\x94\\x94\" && exit 0",
+        "test": "printf \"No test implemented. Shame. \\xF0\\x9F\\x94\\x94\\x0A\" && exit 0",
         "lint": "eslint src -c .eslintrc.json --ext js,json",
         "format:fix": "pretty-quick --staged",
         "format:fix:all": "pretty-quick"
