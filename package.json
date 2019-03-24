@@ -10,11 +10,13 @@
         "test": "printf \"No test implemented. Shame. \\xF0\\x9F\\x94\\x94\\x0A\" && exit 0",
         "lint": "eslint src -c .eslintrc.json --ext js,json",
         "format:fix": "pretty-quick --staged",
-        "format:fix:all": "pretty-quick"
+        "format:fix:all": "pretty-quick",
+        "pre-commit": "run-s format:fix lint build publish",
+        "pre-commit-test": "echo \"yxcxxyc\""
     },
     "husky": {
         "hooks": {
-            "pre-commit": "run-s format:fix lint build publish",
+            "pre-commit": "npm run pre-commit-test",
             "pre-push": "npm run test"
         }
     },
